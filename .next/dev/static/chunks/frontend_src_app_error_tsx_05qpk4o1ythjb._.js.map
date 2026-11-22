@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Documents/project-1/KPHotel/frontend/src/app/error.tsx"],"sourcesContent":["\"use client\";\n\nimport { Button } from \"@/components/ui/Button\";\n\nexport default function GlobalError({ reset }: { error: Error; reset: () => void }) {\n  return (\n    <div className=\"grid min-h-[70vh] place-items-center px-4 pt-24 text-center\">\n      <div className=\"max-w-md\">\n        <h1 className=\"text-5xl text-green\">Something went wrong</h1>\n        <p className=\"mt-3 text-muted\">An unexpected error occurred. Please try again, your search and booking details are safe.</p>\n        <Button className=\"mt-6\" onClick={reset}>Try again</Button>\n      </div>\n    </div>\n  );\n}\n"],"names":["GlobalError","reset","className","onClick"],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAASA,YAAY,EAAEC,KAAK,EAAuC;IAChF,qBACE,yMAAC;QAAIC,WAAU;kBACb,cAAA,yMAAC;YAAIA,WAAU;;8BACb,yMAAC;oBAAGA,WAAU;8BAAsB;;;;;;8BACpC,yMAAC;oBAAEA,WAAU;8BAAkB;;;;;;8BAC/B,yMAAC,2JAAM;oBAACA,WAAU;oBAAOC,SAASF;8BAAO;;;;;;;;;;;;;;;;;AAIjD;KAVwBD"}}]
+}

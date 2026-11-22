@@ -1,0 +1,13 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/frontend/src/app/rooms/page": [
+      "static/media/9eff0a3f1ba11d74-s.p.3aak_kra40y8r.woff2",
+      "static/media/6f3ab718e3727c1a-s.p.3huc2loe0ie8a.woff2",
+      "static/media/47faf0e9117ce2e3-s.p.3z_x6eowsw16y.woff2",
+      "static/media/660acf689794c992-s.p.2_mbdogr7ni8i.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}

@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* KP Hotel design tokens, palette from the approved HiFi deck (p.14) */
+@theme {
+  --color-ink: #14161a;
+  --color-green: #1f3d33;
+  --color-green-900: #16291f;
+  --color-green-700: #2a5244;
+  --color-brass: #b08d57;
+  --color-brass-light: #d9bc8a;
+  --color-brass-deep: #7f6232;
+  --color-sand: #e9dfd1;
+  --color-sand-soft: #f3ece1;
+  --color-ivory: #faf7f2;
+  --color-action: #2f7d4f;
+  --color-action-dark: #25663f;
+  --color-muted: #5b625e;
+  --color-line: #e3dacb;
+  --color-danger: #b3261e;
+  --color-warn: #b7791f;
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(20 22 26 / 0.04), 0 8px 24px -8px rgb(31 61 51 / 0.14);
+  --shadow-lift: 0 2px 4px rgb(20 22 26 / 0.05), 0 18px 40px -12px rgb(31 61 51 / 0.28);
+
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-sheet: sheet 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-pop: pop 0.18s ease-out both;
+  @keyframes fade-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  @keyframes sheet { from { transform: translateY(100%); } to { transform: none; } }
+  @keyframes pop { from { opacity: 0; transform: translateY(-4px) scale(0.98); } to { opacity: 1; transform: none; } }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  /* Lining, tabular figures everywhere: old-style numerals hurt price readability */
+  body { font-variant-numeric: lining-nums; }
+  h1, h2, h3, h4 { font-variant-numeric: lining-nums; font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; line-height: 1.1; text-wrap: balance; }
+  :focus-visible { outline: 2px solid var(--color-brass); outline-offset: 3px; border-radius: 6px; }
+  button, a, [role="button"], select, summary { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  ::selection { background: var(--color-brass-light); color: var(--color-ink); }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+}
+
+@utility container-x { width: 100%; max-width: 76rem; margin-inline: auto; padding-inline: 1rem; @media (min-width: 640px) { padding-inline: 1.5rem; } @media (min-width: 1024px) { padding-inline: 2rem; } }
+@utility eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; }
+@utility scrollbar-none { scrollbar-width: none; &::-webkit-scrollbar { display: none; } }
+@utility pb-safe { padding-bottom: max(0.75rem, env(safe-area-inset-bottom)); }
+
+/* Prices: sans-serif, lining + tabular numerals, never the display serif */
+@utility price { font-family: var(--font-sans); font-weight: 700; font-variant-numeric: lining-nums tabular-nums; letter-spacing: -0.01em; }
