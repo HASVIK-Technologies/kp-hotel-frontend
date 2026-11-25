@@ -14,8 +14,11 @@ KP/
 │   │   ├─ hall-lounge-seating-2.jpeg      sofa lounge, hall behind (second angle)
 │   │   └─ hall-meeting-guests.jpeg        guests seated for a meeting
 │   ├─ videos/kp-hotel-promo-reel.mp4      original reel with its original (advert) audio
-│   └─ brand/kp-logo.jpeg                  logo reference (the site uses the vector public/images/brand/logo-mark.svg)
+│   └─ brand/kp-logo.jpeg                  the logo as received (360 × 360, blurry)
 └─ enhanced/                      cleaned, sharpened, colour-graded versions
+    ├─ brand/kp-logo.svg                   the logo redrawn as a clean vector, measured from the original (any size)
+    ├─ brand/kp-logo-2048.png              same, 2048 × 2048 PNG with transparent corners, for print/social
+    │                                       (the site uses copies at public/images/brand/logo-mark.svg and src/app/icon.svg)
     ├─ photos/<same names>.jpg             full square frame, 2160 × 2160, for print/social/future slots
     ├─ videos/kp-banquet-hall-reel-master.mp4   high-quality master, 720 × 1280, new ambient score
     └─ audio/kp-ambient-score.m4a         the original ambient soundtrack on its own (royalty-free, made for this reel)
@@ -37,7 +40,9 @@ Video for the site: `public/videos/kp-banquet-hall-reel.mp4` (web size, ~15 MB) 
 ## What "enhanced" means
 Compression-noise removal (non-local means), Lanczos upscale, two-stage sharpening, gentle warm grade that tones down the
 electric-blue LEDs/pillars so the photos sit with the site's green-and-brass palette. Video: same treatment plus the
-original audio replaced by a calm ambient score (tanpura-style drone, warm pads, soft bells).
+original audio removed entirely and replaced by an Indian classical instrumental: santoor, sitar and soft tabla in
+Raga Bhupali (Sa Re Ga Pa Dha, Sa = D), a short free-rhythm alaap, then a gentle Keherwa gat at 84 bpm and a final sam.
+No vocals, no tanpura drone, no voice-like sounds; synthesised from scratch, royalty-free.
 
 Photos still needed (currently stock pictures): rooms, restaurant/dining, hotel exterior, home hero, pool, balcony,
 weekend & dining offers.
